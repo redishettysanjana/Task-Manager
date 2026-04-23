@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Task Manager</h1>
+
+<!-- Dashboard -->
+<p>Total: {{ total }} | Completed: {{ completed }} | Pending: {{ pending }}</p>
+
+<!-- Add Task -->
+<form action="/add" method="POST">
+    <input type="text" name="task" placeholder="Enter task" required>
+
+    <select name="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+
+    <button type="submit">Add</button>
+</form>
+
+<!-- Search -->
+<form action="/search" method="POST">
+    <input type="text" name="keyword" placeholder="Search tasks">
+    <button type="submit">Search</button>
+</form>
+
+<!-- Filters -->
+<div>
+    <a href="/">All</a> |
+    <a href="/filter/Pending">Pending</a> |
+    <a href="/filter/Completed">Completed</a>
+</div>
+
+<!-- Tasks -->
+<ul>
+{% for task in tasks %}
+<li>
+<div class="task-card">
+
+    <div class="task-title">{{ task[1] }}</div>
+
+    <div class="task-info">
+        Status:
+        <span class="{{ 'completed' if task[2]=='Completed' else 'pending' }}">
+            {{ task[2] }}
+        </span>
+        |
+        Priority:
+        <span class="{{ task[3].lower() }}">
+            {{ task[3] }}
+        </span>
+    </div>
+
+    <div class="actions">
+        <a href="/complete/{{ task[0] }}">✔</a>
+        <a href="/edit/{{ task[0] }}">✏</a>
+        <a href="/delete/{{ task[0] }}">❌</a>
+    </div>
+
+</div>
+</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
