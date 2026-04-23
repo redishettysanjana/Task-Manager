@@ -1,7 +1,12 @@
 # Task Manager Web App
 
 A full-stack task management web application built using Flask and SQLite.  
-This application allows users to manage daily tasks efficiently with features like adding, editing, deleting, filtering, and searching tasks.
+This application helps users manage daily tasks efficiently with features like adding, editing, deleting, filtering, and searching tasks.
+
+---
+
+## Live Demo
+[Open App](https://task-manager-flask-jpn6.onrender.com)
 
 ---
 
@@ -45,12 +50,9 @@ This application allows users to manage daily tasks efficiently with features li
 ---
 
 ## Installation
+
 ```bash
 git clone https://github.com/redishettysanjana/task-manager-flask.git
 cd task-manager-flask
-pip install flask
+pip install -r requirements.txt
 python app.py
-
-
-## LIVE DEMO
-https://task-manager-flask-jpn6.onrender.com
