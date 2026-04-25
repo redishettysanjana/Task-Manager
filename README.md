@@ -50,8 +50,6 @@ This application helps users manage daily tasks efficiently with features like a
 ---
 
 ## Installation
-
-```bash
 git clone https://github.com/redishettysanjana/task-manager-flask.git
 cd task-manager-flask
 pip install -r requirements.txt
