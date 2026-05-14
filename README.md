@@ -1,7 +1,7 @@
 # Task Manager Web App
 
 A full-stack task management web application built using Flask and SQLite.  
-This application helps users manage daily tasks efficiently with features like adding, editing, deleting, filtering, and searching tasks.
+This application helps users manage daily tasks efficiently with features like adding, editing, deleting, filtering & searching tasks.
 
 ---
 
