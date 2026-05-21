@@ -44,9 +44,6 @@ This is a basic application that helps users manage daily tasks efficiently with
 ### Edit Task
 ![Edit](screenshots/Edit.png)
 
-### Search Feature
-![Search](screenshots/Search.png)
-
 ---
 
 ## Installation
